@@ -1,0 +1,56 @@
+%% See 'tutorial.pdf'
+\documentclass
+    [mtech,
+     smplmath]
+    {iitmdissertation}
+
+\usepackage{multirow}
+
+\dissertationDepartment      {Department of Chemical Engineering}
+\dissertationAuthorName      {Myfirstname Mylastname}
+\dissertationDateOfBirth     {01 January 2022}
+\dissertationDegree          {Master Of Technology in Industrial Artificial Intelligence}
+\dissertationTitle           {My Thesis Title}
+\dissertationMonth           {Month}
+\dissertationYear            {2025}
+\dissertationCertificateDate {July 2022}
+\dissertationType            {Thesis}
+\dissertationGuides          {Dr. Firstname Lastname}
+\dissertationCommitteeName   {Doctoral Committee}
+\dissertationImage           {}
+
+\setupGlossaryAbbreviationsDefinitions
+\begin{document}
+  \prematter
+      %\input 0-prematter/pre-quote
+      %\input 0-prematter/pre-dedication
+      \printCertificate
+      %\input 0-prematter/pre-list-of-publications
+%%
+%%
+%%
+  \begin{FrontMatter}
+      % enable this if you have abbrevations in your report
+      \printGlossaryAndAbbreviations
+      % use this  if you have notations in your report
+      \printNotation
+  \end{FrontMatter}
+%%
+%%
+%%
+  \begin{MainMatter}
+      \input 2-mainmatter/chapters/chap-introduction
+      \input 2-mainmatter/chapters/chap-lists
+      \input 2-mainmatter/chapters/chap-maths
+      \input 2-mainmatter/chapters/chap-figures-tables
+
+      \appendix
+      \input 2-mainmatter/appendices/appn-general-notes
+  \end{MainMatter}
+%%
+%%
+%%
+  \begin{BackMatter}
+      \printBibliographyReferences{references.bib}      
+  \end{BackMatter}
+\end{document}
